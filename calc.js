@@ -3,7 +3,7 @@ function calcImc() {
     const poid = document.getElementById("poid").value;
     const taille = document.getElementById("taille").value;
     const imc = poid / (taille * taille);
-    document.getElementById("result").innerText = "Votre IMC = " + Math.round(imc * 100) / 100;
+    document.getElementById("result").innerText = "Votre IMC = " + imc.toFixed(2);
     const plage = document.getElementById("plage");
     if (imc < 16.5) plage.innerText = "dénutrition ou anorexie";
     else if (imc < 18.5) plage.innerText = "maigreur";
